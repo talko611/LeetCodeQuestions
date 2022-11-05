@@ -1,3 +1,5 @@
+package Medium;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,12 +29,11 @@ public class LongestSubStringProblem {
                 if(charToAppearance.containsKey(currentCh) && charToAppearance.get(currentCh) >= subStringStartingPoint){
                     maxCounter = Math.max(maxCounter, counter);
                     counter = i - charToAppearance.get(currentCh);
-                    charToAppearance.put(currentCh, i);
                     subStringStartingPoint = i - counter;
                 }else {
                     ++counter;
-                    charToAppearance.put(currentCh, i);
                 }
+                charToAppearance.put(currentCh, i);
             }
             return Math.max(maxCounter,counter);
         }
