@@ -8,14 +8,9 @@ package Easy;
 //        Input: list1 = [1,2,4], list2 = [1,3,4]
 //        Output: [1,1,2,3,4,4]
 
+import Utils.ListNode;
+
 public class Merge_Two_Sorted_Lists {
-    public static class ListNode {
-        int val;
-        ListNode next;
-        ListNode() {}
-        ListNode(int val) { this.val = val; }
-        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- }
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         if(list1 == null) return list2;
         else if(list2 == null) return list1;
