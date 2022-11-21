@@ -17,7 +17,7 @@ public class Longest_Common_Prefix {
         for(int i = 1; i < strs.length && !maxCommonStr.isEmpty(); ++i){
             curStr = strs[i];
             if(maxCommonStr.length() > curStr.length()) maxCommonStr = maxCommonStr.substring(0,curStr.length());
-            for(int j = 0; j < curStr.length(); ++j){
+            for(int j = 0; j < maxCommonStr.length(); ++j){
                 if(curStr.charAt(j) != maxCommonStr.charAt(j))
                     maxCommonStr = maxCommonStr.substring(0,j);
             }
